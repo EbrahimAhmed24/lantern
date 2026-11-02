@@ -8,3 +8,4 @@ Lantern is a simple command-line task tracker.
 - `python lantern.py list`: Display all tasks.
 
 Tasks are stored locally in `tasks.json`.
+## Troubleshooting
