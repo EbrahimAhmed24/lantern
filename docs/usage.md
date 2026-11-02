@@ -9,4 +9,3 @@ Lantern is a simple command-line task tracker.
 
 Tasks are stored locally in `tasks.json`.
 ## Troubleshooting
-- `python lantern.py remove <id>`: Remove a task.
