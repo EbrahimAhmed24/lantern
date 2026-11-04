@@ -23,7 +23,7 @@ if args.command == "add":
 elif args.command == "list":
     tasks = load()
     if args.sort:
-        tasks = sorted(tasks, key=lambda task: task["title"])
+        tasks = sorted(tasks, key=lambda task: task["title"].casefold())
     for task in tasks:
         print(task["title"])
     if not tasks:
