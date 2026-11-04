@@ -1,6 +1,8 @@
 import argparse
 import storage
 
+from storage import load
+
 parser = argparse.ArgumentParser()
 sub = parser.add_subparsers(dest="command")
 
@@ -16,6 +18,11 @@ if args.command == "add":
     print("Adding task:", args.title)
 
 elif args.command == "list":
+    tasks = load()
+    if not tasks:
+        print("No tasks yet. Add one with: lantern add <title>")
+    else:
+        print("Listing tasks")
     tasks = storage.load()
 
     if args.done:
