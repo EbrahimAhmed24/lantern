@@ -8,3 +8,5 @@ A simple python command-line task tracker
 |---|---|
 | Ashraqat Mohamed | ashraqt-1026 |
 | Ebrahim Ahmed | EbrahimAhmed24 |
+
+[Contributing Guidelines](CONTRIBUTING.md)
