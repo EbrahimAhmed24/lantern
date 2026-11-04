@@ -1,7 +1,4 @@
 import argparse
-import storage
-
-from storage import load
 
 from storage import load
 
@@ -22,19 +19,11 @@ if args.command == "add":
 
 elif args.command == "list":
     tasks = load()
+    if args.done:
+        tasks = [task for task in tasks if task.get("done")]
     if args.sort:
-        tasks = sorted(tasks, key=lambda task: task["title"].casefold())
-    for task in tasks:
-        print(task["title"])
+        tasks = sorted(tasks, key=lambda task: task["title"])
     if not tasks:
         print("No tasks yet. Add one with: lantern add <title>")
-    else:
-        print("Listing tasks")
-    tasks = storage.load()
-
-    if args.done:
-        tasks = [task for task in tasks if task["done"]]
-
     for task in tasks:
         print(task["title"])
-        
